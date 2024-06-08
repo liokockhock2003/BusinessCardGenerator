@@ -1,0 +1,16 @@
+
+#footer {
+    width: auto;
+    height: auto;
+    margin-top: 0px;
+    padding: 10px;
+    color: white;
+    background-image: url(https://bcassetcdn.com/assets/images/designcom/hero-banner-background/bg-pattern-wave.png);
+    clear: left;
+    margin-left: 0px;
+    text-align: center;
+}
+
+.sn {
+    color: white;
+}

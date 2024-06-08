@@ -1,0 +1,62 @@
+body{
+    margin-top: 0;
+    font-family: Arial, sans-serif;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    
+}
+
+.about {
+    font-family: Times New Roman;
+    line-height: 180%;
+    font-size: 135%;
+    text-align: center;
+    color: #333333;
+}
+
+.background{
+    display: flex;
+    display: absolute
+}
+
+
+.row{
+    display: flex;
+    align-items: center;
+}
+
+.row h1{
+    font-weight: 1000;
+}
+
+input[type="file"]{
+    display: none;
+}
+
+label[for="upload"]{
+    display: inline-block;
+    color: black;
+    font-weight: 1000;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+input[type="submit"]{
+    background-color:rgb(63 89 246) ;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: 0px;
+    transition: 0.2s;
+}
+
+input[type="submit"]:hover{
+    background-color: rgb(53, 74, 192) ;
+}
+
+label[for="upload"]:hover{
+    color: rgb(63 89 246);
+}
