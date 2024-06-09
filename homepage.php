@@ -1,18 +1,3 @@
-<?php
-
-// include_once("CardController.php");
-// $getdata = new CardController();
-
-// if (isset($_GET['submit'])) {
-
-//     $name = $_GET['name'];
-//     $email = $_GET['email'];
-//     $web = $_GET['web'];
-
-//     $getdata->show_info($name, $email, $web);
-
-// }
-?>
 
 <html>
 
@@ -38,9 +23,8 @@
 </head>
 
 <body>
-
+            
 <nav class="navbar navbar-default">
-
     <div class="container-fluid">
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -60,7 +44,12 @@
                     <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
                 </form>
 
+                
             </ul>
+            <form action="includes/logout.inc.php" method="post">
+                <input type="submit" value="Log Out" class="btn btn-block btn-primary"/>
+            </form>
+            
 
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
