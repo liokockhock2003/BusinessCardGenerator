@@ -1,3 +1,8 @@
+<?php
+  require_once 'includes/config_session.inc.php';
+  require_once 'includes/login_view.inc.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -36,24 +41,28 @@
             <div class="col-md-7">
               <h3>Login</h3>
               <p class="mb-4">
-                Lorem ipsum dolor sit amet elit. Sapiente sit aut eos
-                consectetur adipisicing.
+                Login into your account!
               </p>
-              <form action="#" method="post">
+              
+              
+              <form action="includes/login.inc.php" method="post">
                 <div class="form-group first">
                   <label for="username">Username</label>
                   <input
                     type="text"
                     class="form-control"
+                    name="username"
                     placeholder="your-email@gmail.com"
                     id="username"
                   />
                 </div>
+
                 <div class="form-group last mb-3">
                   <label for="password">Password</label>
                   <input
                     type="password"
                     class="form-control"
+                    name="password"
                     placeholder="Your Password"
                     id="password"
                   />
@@ -75,6 +84,11 @@
                   value="Log In"
                   class="btn btn-block btn-primary"
                 />
+
+
+                <?php
+                  check_login_errors();
+                ?>
               </form>
             </div>
           </div>
