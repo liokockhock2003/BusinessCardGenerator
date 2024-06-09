@@ -29,7 +29,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         if($errors){
             $_SESSION["errors_login"] = $errors;
 
-            header("Location: ../index.php");
+            header("Location: ../login.php");
             die();
         }
 

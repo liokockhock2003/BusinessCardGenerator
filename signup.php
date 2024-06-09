@@ -53,7 +53,7 @@
               <form action="includes/signup.inc.php" method="post">
               
                 <div class="form-group first">
-                  <label for="username">Username</label>
+                  <label for="username">Email</label>
                   <input
                     id="username"
                     type="text"
@@ -82,6 +82,14 @@
                   class="btn btn-block btn-primary"
                 />
 
+                <div class="d-flex mb-5 align-items-center">
+                  <label style="padding-left:0px;cursor:default;" class="control control--checkbox mb-0">
+                    <span class="caption">Already have an account?</span>
+                  </label>
+                  <span style="margin-left:6px !important;" class="ml-auto">
+                    <a href="login.php" class="forgot-pass">Log in</a>
+                  </span>
+                </div>
                 
               </form>
 

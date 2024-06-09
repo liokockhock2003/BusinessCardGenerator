@@ -47,7 +47,7 @@
               
               <form action="includes/login.inc.php" method="post">
                 <div class="form-group first">
-                  <label for="username">Username</label>
+                  <label for="username">Email</label>
                   <input
                     type="text"
                     class="form-control"
@@ -74,9 +74,9 @@
                     <input type="checkbox" checked="checked" />
                     <div class="control__indicator"></div>
                   </label>
-                  <span class="ml-auto"
-                    ><a href="#" class="forgot-pass">Forgot Password</a></span
-                  >
+                  <span class="ml-auto">
+                    <a href="#" class="forgot-pass">Forgot Password</a>
+                  </span>
                 </div>
 
                 <input
@@ -84,6 +84,15 @@
                   value="Log In"
                   class="btn btn-block btn-primary"
                 />
+
+                <div class="d-flex mb-5 align-items-center">
+                  <label style="padding-left:0px;cursor:default;" class="control control--checkbox mb-0">
+                    <span class="caption">Don't have an account?</span>
+                  </label>
+                  <span style="margin-left:6px !important;" class="ml-auto">
+                    <a href="signup.php" class="forgot-pass">Sign up</a>
+                  </span>
+                </div>
 
 
                 <?php
