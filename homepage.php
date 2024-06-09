@@ -1,6 +1,10 @@
+<?php
+  require_once 'includes/config_session.inc.php';
+  require_once 'includes/info_view.inc.php';
+?>
 
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
 
     <meta charset="utf-8">
@@ -69,12 +73,12 @@
 
             </p> <!-- End Of The P About Class --> <br>
 
-            <form action="" method="post" class="formsize" id="signupForm">
+            <form action="includes/info.inc.php" method="post" class="formsize" id="signupForm">
                 <input type="text" name="name" id="name" class="form-control" placeholder="Your Name"> <br>
-                <input type="text" name="web" id="web" class="form-control" placeholder="Your Position"> <br>
-                <input type="email" name="email" id="email" class="form-control" placeholder="Your Email"> <br>
-                <input type="text" name="web" id="location" class="form-control" placeholder="Your Address"> <br>
-                <input type="file" id="upload" class="form-control-file" name="file_img" aria-describedby="fileHelp"> 
+                <input type="text" name="position" id="position" class="form-control" placeholder="Your Position"> <br>
+                <input type="text" name="email" id="email" class="form-control" placeholder="Your Email"> <br>
+                <input type="text" name="address" id="address" class="form-control" placeholder="Your Address"> <br>
+                <!-- <input type="file" name="upload" id="upload" class="form-control-file"  aria-describedby="fileHelp">  -->
                 <label for="upload"><i class="fa fa-upload"></i>  Upload Logo</label><br><br><br>
                 <input type="submit" name="submit" value="Generate Business Card" class="btn btn-primary"> <br><br>
             </form>
@@ -85,7 +89,9 @@
         </div>
         
     </div> <!-- End Of The Row Class -->
-
+            <?php
+                check_info_errors();
+              ?>
 </div> <!-- End Of The Container Class -->
 
 <script type="text/javascript">
