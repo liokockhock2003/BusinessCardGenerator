@@ -5,6 +5,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     $position = $_POST["position"];
     $email = $_POST["email"];
     $address = $_POST["address"];
+    $imgData = $_FILES['image'];
+
 
     try {
         require_once 'dbh.inc.php';
@@ -15,7 +17,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         //errop handlers
         $errors = [];
 
-        if(is_info_empty($name, $position, $email, $address)){
+        if(is_info_empty($name, $position, $email, $address, $imgData, $imgData)){
             $errors["empty_input"] = "Fill in all the fields!";
         } 
         if(is_email_invalid($email)){
@@ -30,7 +32,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
         }
 
-        create_card($pdo, $name, $position, $email, $address);
+        create_card($pdo, $name, $position, $email, $address, $imgData);
         header("Location: ../homepage.php");
 
         $pdo=null;

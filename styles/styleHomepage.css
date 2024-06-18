@@ -1,0 +1,523 @@
+/* Ensures that the entire page is filled with content*/
+
+body, html{
+    font-family: Arial, sans-serif;
+    margin:0;
+    padding:0;
+    display: grid;
+    grid-template:
+    'top-website'
+    'info-container'
+    'quote'
+    'action'
+    'footer';
+    grid-template-rows: 1fr auto auto auto auto;
+
+}
+
+/*General purposed styling for the entire page*/
+
+h1 {
+    margin: 0;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    align-items: center;
+    margin-right: 10%;
+}
+
+.link,
+.secondary-text,
+button {
+    color: #E5E7EB;
+    font-size: 18px;
+}
+
+button {
+    background-color: #3882F6;
+    font-weight: 600;
+    width: 30%;
+    margin-bottom: 20%;
+    border-radius: 7px;
+    border-color: #3882F6;
+}
+
+
+/*Styling for the top part of the page*/
+
+.top-website {
+    background-color: #1F2937;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #F9FAF8;
+    font-size: 24px;
+    font-weight: 700;
+    width: 20%;
+    list-style-type: none;
+    margin-left: 10%;
+}
+
+.description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 65px;
+}
+
+.description-left {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+    margin-right: 20px;
+}
+
+.description .description-left h1{
+    color: white;
+    margin-bottom: 10px;
+    font-size: 40px;
+    font-weight: 1000;
+}
+
+.description .description-left p{
+    color: white;
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.form-control{
+    margin-bottom: 12px;
+    border-radius: 5px;
+    font-size: 15px;
+    height: 30px;
+    width: 300px;
+    border: none;
+}
+
+input[type="file"]{
+    display: none;
+}
+
+/* Ensures that the entire page is filled with content*/
+
+body, html{
+    margin:0;
+    padding:0;
+    display: grid;
+    grid-template:
+    'top-website'
+    'info-container'
+    'quote'
+    'action'
+    'footer';
+    grid-template-rows: 1fr auto auto auto auto;
+
+}
+
+/*General purposed styling for the entire page*/
+
+h1 {
+    margin: 0;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+    align-items: center;
+    margin-right: 10%;
+}
+
+.link,
+.secondary-text,
+button {
+    color: #E5E7EB;
+    font-size: 18px;
+}
+
+button {
+    background-color: #3882F6;
+    font-weight: 600;
+    width: 30%;
+    margin-bottom: 20%;
+    border-radius: 7px;
+    border-color: #3882F6;
+}
+
+
+/*Styling for the top part of the page*/
+
+.top-website {
+    background-color: #1F2937;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    color: #F9FAF8;
+    font-size: 24px;
+    font-weight: 700;
+    width: 20%;
+    list-style-type: none;
+    margin-left: 10%;
+}
+
+.description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 65px;
+}
+
+.description-left {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+    margin-right: 20px;
+}
+
+.description .description-left h1{
+    color: white;
+    margin-bottom: 10px;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.description .description-left p{
+    color: white;
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.form-control{
+    margin-bottom: 12px;
+    border-radius: 5px;
+    font-size: 15px;
+    height: 30px;
+    width: 300px;
+    border: none;
+}
+
+input[type="file"]{
+    display: none;
+}
+
+
+input[type="submit"]{
+    background-color:#3882F6;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: 0px;
+    transition: 0.15s;
+}
+
+input[type="submit"]:hover{
+    background-color: #3882F6 ;
+    cursor: pointer;
+}
+
+label[for="upload"]{
+    color: white;
+    font-size: 15px;
+    transition: 0.15s;
+    
+}
+
+label[for="upload"]:hover{
+    color: #3882F6;
+    cursor: pointer;
+}
+
+.description-right {
+    margin-right: 10%;
+    color: #E5E7EB;
+    text-align: center;
+    height: 100%;
+}
+
+.description-right img{
+  width: 100%;
+  height: auto;
+
+}
+
+@media screen and (max-width: 800px) {
+  .description-right {
+    display: none;
+  }
+}
+
+
+.secondary-text {
+    margin-top: -6%;
+}
+
+
+/* Styling for the 2nd layer of the page */
+
+.info-container h2 {
+    text-align: center;
+}
+
+  .info-row {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+
+p.image {
+    border: solid;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    border-radius: 10px;
+    border-color: #3882F6;
+    width: 30%;
+    margin-left: 40%;
+    text-align: center;
+}
+
+p.image-subtext {
+    width: 30%;
+    text-align: center;
+    margin-left: 40%;
+    margin-bottom: 15%;
+}
+
+/* Styling for the 3rd layer of the page */
+
+.quote {
+    background-color: #E5E7EB;
+    padding: 5% 20% 5% 20%;
+}
+
+.quote-text {
+    margin-left: 10%;
+    font-size: 36px;
+    color: #1F2937;
+    width: 83%;
+}
+
+.quote-author {
+    margin-left: 75%;
+}
+
+/* Styling for the 4th layer of the page */
+
+.action {
+    margin-left: 15%;
+    margin-top: 5%;    
+    margin-bottom: 5%;
+}
+
+.action-container {
+    background-color: #3882F6;
+    display: flex;
+    width: 65%;
+    border: #3882F6;
+    border-radius: 7px;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+p.action-text {
+    color: #F9FAF8;
+    font-size: 24px;
+    font-weight: 700;
+    width: 100%;
+    margin-bottom: 7%;
+}
+
+.action-button {
+    border: #E5E7EB;
+    border: solid;
+    width: 130%;
+    border-radius: 7px;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    margin-top: 50%;
+}
+
+.footer {
+    margin-top: 5%;
+    text-align: center;
+    padding-bottom: 1%;
+    background-color: #1F2937;
+    padding-top: 1%;
+}
+
+.footer-text {
+    color: #E5E7EB;
+}
+
+
+input[type="submit"]:hover{
+    background-color: #285eb4 ;
+    cursor: pointer;
+}
+
+label[for="upload"]{
+    color: white;
+    font-size: 15px;
+    transition: 0.15s;
+    
+}
+
+label[for="upload"]:hover{
+    color: #c0c0c0;
+    cursor: pointer;
+}
+
+.fa-cloud-upload{
+    margin-right:6px;
+}
+
+.description-right {
+    margin-right: 10%;
+    color: #E5E7EB;
+    text-align: center;
+    height: 100%;
+}
+
+.description-right img{
+  width: 100%;
+  height: auto;
+
+}
+
+@media screen and (max-width: 800px) {
+  .description-right {
+    display: none;
+  }
+}
+
+
+.secondary-text {
+    margin-top: -6%;
+}
+
+
+/* Styling for the 2nd layer of the page */
+
+.info-container h2 {
+    text-align: center;
+}
+
+  .info-row {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+
+p.image {
+    border: solid;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    border-radius: 10px;
+    border-color: #3882F6;
+    width: 30%;
+    margin-left: 40%;
+    text-align: center;
+}
+
+p.image-subtext {
+    width: 30%;
+    text-align: center;
+    margin-left: 40%;
+    margin-bottom: 15%;
+}
+
+/* Styling for the 3rd layer of the page */
+
+.quote {
+    background-color: #E5E7EB;
+    padding: 5% 20% 5% 20%;
+}
+
+.quote-text {
+    margin-left: 10%;
+    font-size: 36px;
+    color: #1F2937;
+    width: 83%;
+}
+
+.quote-author {
+    margin-left: 75%;
+}
+
+/* Styling for the 4th layer of the page */
+
+.action {
+    margin-left: 15%;
+    margin-top: 5%;    
+    margin-bottom: 5%;
+}
+
+.action-container {
+    background-color: #3882F6;
+    display: flex;
+    width: 65%;
+    border: #3882F6;
+    border-radius: 7px;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+p.action-text {
+    color: #F9FAF8;
+    font-size: 24px;
+    font-weight: 700;
+    width: 100%;
+    margin-bottom: 7%;
+}
+
+.action-button {
+    border: #E5E7EB;
+    border: solid;
+    width: 130%;
+    border-radius: 7px;
+    padding-bottom: 5%;
+    padding-top: 5%;
+    margin-top: 50%;
+}
+
+.footer {
+    margin-top: 5%;
+    text-align: center;
+    padding-bottom: 1%;
+    background-color: #1F2937;
+    padding-top: 1%;
+}
+
+.footer-text {
+    color: #E5E7EB;
+}
