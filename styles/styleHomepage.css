@@ -177,6 +177,10 @@ button {
     margin-left: 10%;
 }
 
+.logo img{
+    height: 70px;
+}
+
 .description {
     display: flex;
     justify-content: space-between;

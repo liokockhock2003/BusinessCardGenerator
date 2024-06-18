@@ -17,7 +17,7 @@
         <!--Header and hero text-->
         <div class="top-website">
             <div class="header">
-                <li class="logo">Header Logo</li>
+                <li class="logo"><img src="images/logo.png"></li>
                 <ul>
                     <li class="link">Home</li>
                     <li class="link">More</li>
