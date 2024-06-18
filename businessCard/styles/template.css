@@ -1,0 +1,72 @@
+:root {
+    --blue: #29b6f6;
+    --green: #9ccc65;
+    --purple: #ba68c8;
+    --orange: #f57c00;
+    --red: #ef5350;
+    --cyan: #4dd0e1;
+    --background-light: #E5E7EB;
+    --background-dark: #E5E7EB;
+}
+  
+body {
+    background-image: linear-gradient(to bottom right, var(--background-dark), var(--background-light));
+}
+
+.content {
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    perspective: 150rem;
+    height: 20rem;
+    width: 30rem;
+    position: relative;
+}
+
+.card__side {
+    height: 18rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: auto;
+    width: 30rem;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+}
+
+.card__side--front {
+    background-color: #1c1c1c;
+}
+
+.card__side--back {
+    transform: rotateY(180deg);
+    background-color: #1c1c1c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.card:hover .card__side--front {
+    transform: rotateY(-180deg);
+}
+
+.card:hover .card__side--back {
+    transform: rotateY(0deg);
+}
+
+.card__cont {
+    height: 18rem;
+    background-color: #1c1c1c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
