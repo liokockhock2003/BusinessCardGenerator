@@ -5,8 +5,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     $position = $_POST["position"];
     $email = $_POST["email"];
     $address = $_POST["address"];
-    $imgData = $_FILES['image'];
-
+    $imgData = $_FILES['image']['name'];
+    $imgData = "image/".$imgData;
 
     try {
         require_once 'dbh.inc.php';

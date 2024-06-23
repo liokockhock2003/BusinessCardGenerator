@@ -1,4 +1,5 @@
 // scripts.js
+// this script will display a php file in another php file
 document.addEventListener("DOMContentLoaded", function() {
     // Array of HTML file URLs to embed
     var htmlFiles = [
@@ -13,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
             var iframe = document.createElement('iframe');
             iframe.src = file;
             iframe.className = 'embedded-frame';
+            iframe.scrolling = 'no';
             container.appendChild(iframe);
         });
     }

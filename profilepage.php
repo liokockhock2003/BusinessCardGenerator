@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="styles/styleHomepage.css">
         <link rel="stylesheet" href="styles/styleProfilepage.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script></script>
     </head>
     <body>
 
@@ -44,6 +45,7 @@
             <h2>Your business card collections!</h2>
             <div class="grid-container" id="grid-container">
                 <!-- Dynamic content will be injected here -->
+                <div class = "card" id = "container"></div>
             </div>  
         </div>
 
@@ -72,6 +74,7 @@
         </div>
 
         <script src="scripts/script.js"></script>
+        <script src="scripts/displayTemplate.js"></script>
 
     </body>
 </html>

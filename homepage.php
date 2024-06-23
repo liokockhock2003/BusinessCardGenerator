@@ -11,7 +11,6 @@
         <title>Home</title>
         <link rel="stylesheet" href="styles/styleHomepage.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="scripts.js" defer></script>
     </head>
     <body>
 
@@ -35,8 +34,22 @@
                         <input type="text" name="position" id="position" class="form-control" placeholder="Your Position"> <br>
                         <input type="text" name="email" id="email" class="form-control" placeholder="Your Email"> <br>
                         <input type="text" name="address" id="address" class="form-control" placeholder="Your Address"> <br>
-                        <input type="file" name="image" id="upload" class="form-control-file"  aria-describedby="fileHelp"> 
-                        <label for="upload"> <i class="fa fa-cloud-upload"></i></i>Upload Picture</label><br><br><br>
+                        <input type="file" name="image" id="upload" class="form-control-file"  aria-describedby="fileHelp">
+                        <label for="upload"> <i class="fa fa-cloud-upload"></i></i>Upload Picture</label><br><br>
+                        <label class ="select-label" for="select-box">Choose a template</label>
+                        <div class="select-container">
+                            <select class = "select-box" name="template_id" id="select-box">
+                                <option value="">Select an option</option>
+                                <option value="1">Template 1</option>
+                                <option value="2">Template 2</option>
+                                <option value="3">Template 3</option>
+                            </select>
+                            <div class = "icon-container">
+                                <i class="fa fa-caret-down"></i>
+                            </div>
+                        </div>
+                        <br>
+                        
                         <input type="submit" name="submit" value="Start Now" class="btn btn-primary"> <br><br>
                     </form>
                     <?php
@@ -52,26 +65,19 @@
         </div>
 
         <!--Information panels-->
-        <div class="info-container">
-            <h2>Some random information.</h2>
+        <div id="templates" class="info-container">
+            <h2>Choose Preferred Template</h2>
             <div class="info-row">
                 <div class="info-panel">
-                    <div id = "container"></div>
+                    <img class = "template" src="image/3.png">
                 </div>
 
                 <div class="info-panel">
-                    <p class="image">image placeholder</p>
-                    <p class="image-subtext">This is some subtext under an illustration or image</p>
+                    <img  class = "template" src="image/3.png">
                 </div>
 
                 <div class="info-panel">
-                    <!-- <p class="image">image placeholder</p>
-                    <p class="image-subtext">This is some subtext under an illustration or image</p> -->
-                </div>
-
-                <div class="info-panel">
-                    <!-- <p class="image">image placeholder</p>
-                    <p class="image-subtext">This is some subtext under an illustration or image</p> -->
+                    <img class = "template" src="image/3.png">
                 </div>
             </div>    
         </div>

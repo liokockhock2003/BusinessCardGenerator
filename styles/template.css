@@ -5,16 +5,18 @@
     --orange: #f57c00;
     --red: #ef5350;
     --cyan: #4dd0e1;
-    --background-light: #E5E7EB;
-    --background-dark: #E5E7EB;
+    --background-light: #1b1c1c;
+    --background-dark: black;
 }
   
 body {
-    background-image: linear-gradient(to bottom right, var(--background-dark), var(--background-light));
+    /* background-image: linear-gradient(to bottom, var(--background-dark), var(--background-light)); */
+    background-color: #1b1c1c;
 }
 
 .content {
     height: 100vh;
+    /* background-color: #1b1c1c; */
     color: white;
     display: flex;
     justify-content: center;
