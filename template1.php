@@ -1,3 +1,9 @@
+<?php
+    require_once "includes/config_session.inc.php";
+    require_once "includes/getInfo.inc.php";
+    require_once "includes/getInfo_view.inc.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

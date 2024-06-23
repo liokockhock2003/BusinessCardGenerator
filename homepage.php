@@ -11,6 +11,7 @@
         <title>Home</title>
         <link rel="stylesheet" href="styles/styleHomepage.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="scripts.js" defer></script>
     </head>
     <body>
 
@@ -55,8 +56,7 @@
             <h2>Some random information.</h2>
             <div class="info-row">
                 <div class="info-panel">
-                    <p class="image">image placeholder</p>
-                    <p class="image-subtext">This is some subtext under an illustration or image</p>
+                    <div id = "container"></div>
                 </div>
 
                 <div class="info-panel">
@@ -65,13 +65,13 @@
                 </div>
 
                 <div class="info-panel">
-                    <p class="image">image placeholder</p>
-                    <p class="image-subtext">This is some subtext under an illustration or image</p>
+                    <!-- <p class="image">image placeholder</p>
+                    <p class="image-subtext">This is some subtext under an illustration or image</p> -->
                 </div>
 
                 <div class="info-panel">
-                    <p class="image">image placeholder</p>
-                    <p class="image-subtext">This is some subtext under an illustration or image</p>
+                    <!-- <p class="image">image placeholder</p>
+                    <p class="image-subtext">This is some subtext under an illustration or image</p> -->
                 </div>
             </div>    
         </div>
