@@ -12,6 +12,7 @@
         <title>Profile</title>
         <link rel="stylesheet" href="styles/styleHomepage.css">
         <link rel="stylesheet" href="styles/styleProfilepage.css">
+        <link rel="stylesheet" href="styles/button.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
