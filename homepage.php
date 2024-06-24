@@ -19,9 +19,8 @@
             <div class="header">
                 <li class="logo"><img src="images/logo.png"></li>
                 <ul>
-                    <li class="link">Home</li>
+                    <a href="homepage.php"><li class="link">Home</li></a>
                     <a href="profilepage.php"><li class="link">Profile</li></a>
-                    <li class="link">About</li>
                 </ul>
             </div>
 
@@ -69,14 +68,17 @@
             <h2>Choose Preferred Template</h2>
             <div class="info-row">
                 <div class="info-panel">
-                    <img class = "template" src="image/template3.png">
+                    <h2>Template 1<h2>
+                    <img class = "template" src="image/template1.png">
                 </div>
 
                 <div class="info-panel">
-                    <img  class = "template" src="image/template3.png">
+                    <h2>Template 2<h2>
+                    <img  class = "template" src="image/template2.png">
                 </div>
 
                 <div class="info-panel">
+                    <h2>Template 3<h2>
                     <img class = "template" src="image/template3.png">
                 </div>
             </div>    
@@ -97,14 +99,14 @@
                     <p class="secondary-text">Sign up for our product by clicking that button right over there!</p>
                 </div>
                 <div class="action-right">
-                    <button class="action-button">Sign Up</button>
+                <a href="signup.php"><button class="action-button">Sign Up</button></a>
                 </div>
             </div>
         </div>
 
         <!--footer-->
         <div class="footer">
-            <p class="footer-text">Copyright © </p>
+            <p class="footer-text">Copyright © Xerox</p>
         </div>
 
     </body>
