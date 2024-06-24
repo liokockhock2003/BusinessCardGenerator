@@ -1,7 +1,6 @@
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-
     $card_id = $_POST["card_id"];
 
     try{
@@ -9,11 +8,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         require_once 'delete_model.inc.php';
 
         
-
+        deleteCard($pdo, $card_id);
         
-
-        create_user($pdo, $username, $password);
-        header("Location: ../login.php?signup=success");
+        header("Location: ../profilepage.php");
         
         
 
@@ -21,6 +18,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         die("Query failed: ". $e->getMessage());
     }
 } else{
-    header("Location: ../index.php");
+    header("Location: ../profilepage.php");
     die();
 }

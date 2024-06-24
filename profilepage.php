@@ -2,6 +2,7 @@
     require_once "includes/config_session.inc.php";
     require_once "includes/getInfo.inc.php";
     require_once "includes/info_view.inc.php";
+    require_once "includes/login_view.inc.php";
 ?>
 
 <!--html head-->
@@ -22,7 +23,7 @@
             <div class="header">
                 <li class="logo"><img src="images/logo.png"></li>
                 <ul>
-                    <li class="link">Home</li>
+                    <a href="homepage.php"><li class="link">Home</li></a>
                     <li class="link">Profile</li>
                     <li class="link">About</li>
                 </ul>
@@ -31,7 +32,7 @@
             <div class="description">
                 <div class="description-left">
                     <h1>Welcome to your profile page!</h1>
-                    <p id="username">INSERT USERNAME HERE</p>
+                    <p id="username"><?php getUsername() ?></p>
                     <p>Below are your business cards.</p>
                 </div>
 
@@ -76,7 +77,7 @@
                 <p>Update new information about your card!</p>
                 <form action="includes/edit.inc.php" method="post" class="formsize" id="signupForm" enctype="multipart/form-data">
 
-                    <input type="text" name="name" id="name" class="form-control" value="1"> <br>
+                    <input type="text" name="card_id" id="card_id" class="form-control" value="1"> <br>
                     
                     <input type="text" name="name" id="name" class="form-control" placeholder="Your Name"> <br>
                     <input type="text" name="position" id="position" class="form-control" placeholder="Your Position"> <br>
