@@ -29,9 +29,8 @@
             <div class="card__cta">
               <p><span class="purple">const</span> aboutMe <span class="cyan">=</span> {
                 <br />
-                <span class="space red">name</span>
-                <span class="cyan">:</span> <span class="green"><?php displayName() ?></span>,
-                <br/>
+                <p id='name'><span class="space red">Name</span>
+                <span class="cyan">:</span> <span class="green"></span></p>
                 <span class="space red">email</span>
                 <span class="cyan">:</span> <span class="green"><?php displayEmail() ?></span>',
                 <br/>
@@ -49,5 +48,6 @@
             </div>
           </div>
         </div>
+        <script src="scripts/retrieveCardData.js"></script> 
 </body>
 </html>

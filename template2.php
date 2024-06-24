@@ -25,16 +25,16 @@
                 <!-- Back Content -->
                 <div class="card__cta">
                     <h2>Contact</h2>
-                    <p>Name: <?php displayName() ?></p>
-                    <p>Email: <?php displayEmail() ?></p>
-                    <p>Position: <?php displayPosition() ?></p>
-                    <p>Address: <?php displayAddress() ?></p>
+                    <p id="name">Name:  </p>
+                    <p id="email">Email:  </p>
+                    <p id="position">Position: </p>
+                    <p id="address">Address: </p>
                 </div>
-                <div class="card__img">
-                    <?php displayImage() ?>
+                <div class="card__img" id="image">
                 </div>
             </div>
         </div>
-    </div>    
+    </div>  
+    <script src="scripts/retrieveCardData.js"></script>  
 </body>
 </html>
