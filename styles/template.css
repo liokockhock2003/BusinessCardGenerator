@@ -11,7 +11,7 @@
   
 body {
     /* background-image: linear-gradient(to bottom, var(--background-dark), var(--background-light)); */
-    background-color: #1b1c1c;
+    background-color: white;
 }
 
 .content {
