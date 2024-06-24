@@ -3,12 +3,13 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Array of HTML file URLs to embed
     var htmlFiles = [
-        'template3.php',
-        'template1.php'
+        'template1.php',
+        'template2.php',
+        'template3.php'
         // Add more URLs if needed
     ];
 
-    function displayCard(file) {
+    function displayCardInHTML(file) {
         var parentRef = document.getElementById('grid-container');
         var divRef = document.createElement('div');
         var iframe = document.createElement('iframe');
@@ -21,12 +22,24 @@ document.addEventListener("DOMContentLoaded", function() {
         parentRef.appendChild(divRef);
     }
 
-    // Function to create and append iframes for each HTML file
-    function embedHtmlFiles(files) {
-        var container = document.getElementById('container');
-        files.forEach(displayCard);
+    function getCardCount(){
+        //AJAX to fetch data from database to JavaScript
+        fetch('includes/getInfo_count.inc.php')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(data => {
+            for(var key in data){
+                displayCardInHTML(htmlFiles[data[key] - 1]);
+            }
+        })
+        .catch(error => {
+          console.error('There was a problem with the fetch operation:', error);
+        });
     }
-
     // Call the function to embed the HTML files
-    embedHtmlFiles(htmlFiles);
+    getCardCount();
 });
