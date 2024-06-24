@@ -31,7 +31,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         //errop handlers
         $errors = [];
 
-        if(is_info_empty($name, $position, $email, $address, $template_id, $imgData, $imgData)){
+        if(is_info_empty($name, $position, $email, $address, $template_id, $imgData)){
             $errors["empty_input"] = "Fill in all the fields!";
         } 
         if(is_email_invalid($email)){
