@@ -1,4 +1,6 @@
 
+// import {getCookie} from './cookies.js';
+
 function determineTemplateID(){
     var path = window.location.pathname;
     var page = path.split("/").pop();
@@ -18,7 +20,6 @@ function determineTemplateID(){
             break;
         }
     }
-
     return currID;
 }
 

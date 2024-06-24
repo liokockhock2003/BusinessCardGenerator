@@ -22,7 +22,7 @@ try {
     $data = [];
     $index = 0;
     foreach($cardDetails as $card){
-        $data["id_".$index] = $card['template_id'];
+        $data[$card['template_id']] = $card['card_id'];
         $index++;
     }
 

@@ -1,5 +1,7 @@
 // scripts.js
 // this script will display a php file in another php file
+import {getCookie, setCookie} from './cookies.js';
+
 document.addEventListener("DOMContentLoaded", function() {
     // Array of HTML file URLs to embed
     var htmlFiles = [
@@ -18,38 +20,38 @@ document.addEventListener("DOMContentLoaded", function() {
         var viewButton = document.createElement('button');
         var updateButton = document.createElement('button');
         var deleteButton = document.createElement('button');
-
+        
         divRef.className = 'card';
-
+        
         divButton.className = 'button';
         divButton.style.flexGrow = 1;
-
+        
         divIframe.style.flexGrow = 6;
-
+        
         viewButton.className = 'view-button';
         viewButton.innerHTML = 'View';
         updateButton.className = 'update-button';
         updateButton.innerHTML = 'Update';
         deleteButton.className = 'delete-button';
         deleteButton.innerHTML = 'Delete';
-
+        
         iframe.src = file;
         iframe.className = 'cardIframe';
         iframe.frameBorder = 'no';
         iframe.scrolling = 'no';
-
+        
         divButton.appendChild(viewButton);
         divButton.appendChild(updateButton);
         divButton.appendChild(deleteButton);
         
         divIframe.appendChild(iframe);
-
+        
         divRef.appendChild(divIframe);
         divRef.appendChild(divButton);
         parentRef.appendChild(divRef);
-    }
-
-    function getCardCount(){
+      }
+      
+      function getCardCount(){
         //AJAX to fetch data from database to JavaScript
         fetch('includes/getInfo_count.inc.php')
         .then(response => {
@@ -59,9 +61,10 @@ document.addEventListener("DOMContentLoaded", function() {
           return response.json();
         })
         .then(data => {
-            for(var key in data){
-                displayCardInHTML(htmlFiles[data[key] - 1]);
-            }
+          for(var key in data){
+            displayCardInHTML(htmlFiles[key - 1]);
+            setCookie(data[key], key, 1);
+          }
         })
         .catch(error => {
           console.error('There was a problem with the fetch operation:', error);
