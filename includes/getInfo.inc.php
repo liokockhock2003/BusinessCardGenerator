@@ -7,9 +7,13 @@
         //2 dimensional
         require_once 'config_session.inc.php'; //session
         
+        $dataCount = 0;
         foreach ($cardDetails as $index => $card) {
             $_SESSION['cardDetails_' . $index] = $card;
+            $dataCount++;
         }
+        $_SESSION["dataCount"] = $dataCount;
+
     } catch (PDOException $e) {
         die("Query failed: ". $e->getMessage());
     }
