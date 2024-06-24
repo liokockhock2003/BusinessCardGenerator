@@ -24,8 +24,7 @@
                 <li class="logo"><img src="images/logo.png"></li>
                 <ul>
                     <a href="homepage.php"><li class="link">Home</li></a>
-                    <li class="link">Profile</li>
-                    <li class="link">About</li>
+                    <a href="profilepage.php"><li class="link">Profile</li></a>
                 </ul>
             </div>
 
@@ -62,10 +61,10 @@
             <div class="action-container">
                 <div class="action-left">
                     <p class="action-text">Call to action! It's time!</p>
-                    <p class="secondary-text">Sign up for our product by clicking that button right over there!</p>
+                    <p class="secondary-text">Create Your Business Card Now!</p>
                 </div>
                 <div class="action-right">
-                    <button class="action-button">Sign Up</button>
+                    <a href="homepage.php"><button class="action-button">Start Now</button></a>
                 </div>
             </div>
         </div>

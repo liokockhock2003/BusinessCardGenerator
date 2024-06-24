@@ -1,18 +1,21 @@
 <?php
 
 if($_SERVER["REQUEST_METHOD"] === "POST"){
-    $card_id = $_POST["card_id"];
+    $template_id = $_POST["card_id"];
     try {
         //errop handlers
         require_once 'dbh.inc.php';
         require_once 'edit_model.inc.php';
         require_once 'config_session.inc.php';
 
-        $card = getCardDetails($pdo, $card_id);
+        $card = getCardDetails($pdo, $template_id);
         $dataCount = $_SESSION["card_count"];
 
         for($i=0; $i<$dataCount; $i++){
-            if($card["card_id"] == $card_id){
+            if($card["template_id"] == $template_id){
+                
+                $card_id = $card['card_id'];
+
                 if (isset($_POST["name"])) {
                     $name = $_POST["name"];
                 } else{
@@ -47,29 +50,22 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
                     $imgData = $_FILES['image']['name'];
                     $tempFilePath = $_FILES['image']['tmp_name'];
                     $imgData = "../image/".$imgData;
-                    if (move_uploaded_file($tempFilePath, $imgData)) {
-                        echo "File is valid and was successfully uploaded.\n";
-                        echo "Stored in: " . $imgData;
-                    } else {
-                        echo "File upload failed.";
-                    }
+                    move_uploaded_file($tempFilePath, $imgData);
+                    
                 } else {
                     $imgData = $card['image'];
                     $tempFilePath = $_FILES['image']['tmp_name'];
                     $imgData = "../image/".$imgData;
-                    if (move_uploaded_file($tempFilePath, $imgData)) {
-                        echo "File is valid and was successfully uploaded.\n";
-                        echo "Stored in: " . $imgData;
-                    } else {
-                        echo "File upload failed.";
-                    }
+                    move_uploaded_file($tempFilePath, $imgData);
                 }
 
             }
         }
-
+        
         updateCardDetails($pdo, $card_id, $name, $email, $position, $address, $template_id, $imgData);
-        header("Location ../profilepage.php");
+        header("Location: ../profilepage.php?login=success");
+
+        die();
     } catch (PDOException $e) {
         die("Query failed: ". $e->getMessage());
     }

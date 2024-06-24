@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-function getCardDetails(object $pdo, string $card_id){
+function getCardDetails(object $pdo, string $template_id){
     $id = $_SESSION["user_id"];
-    $query = "SELECT * FROM businesscard WHERE card_id = :card_id;";
+    $query = "SELECT * FROM businesscard WHERE template_id = :template_id;";
     $stmt = $pdo->prepare($query);
-    $stmt->bindParam(":card_id", $card_id);
+    $stmt->bindParam(":template_id", $template_id);
     $stmt->execute();
     $card = $stmt->fetch(PDO::FETCH_ASSOC);
     
@@ -27,7 +27,7 @@ function updateCardDetails(object $pdo, string $card_id, string $name, string $p
     email = :email,
     address = :address,
     image = :imgData
-    WHERE card_id = :card_id;";
+    WHERE template_id = :template_id;";
 
     $stmt = $pdo->prepare($query);
 

@@ -12,6 +12,7 @@ body, html{
     'action'
     'footer';
     grid-template-rows: 1fr auto auto auto auto;
+    scroll-behavior: smooth;
 
 }
 
@@ -205,6 +206,14 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.header a{
+    text-decoration: none;
+}
+
+.header .link:hover{
+    color: rgb(167, 167, 167);
 }
 
 .logo {

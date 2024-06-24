@@ -1,16 +1,16 @@
 <?php
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $card_id = $_POST["card_id"];
+    $template_id = $_POST["template_id"];
 
     try{
         require_once 'dbh.inc.php';
         require_once 'delete_model.inc.php';
 
         
-        deleteCard($pdo, $card_id);
+        deleteCard($pdo, $template_id);
         
-        header("Location: ../profilepage.php");
+        header("Location: ../profilepage.php?login=success");
         
         
 

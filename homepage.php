@@ -17,11 +17,10 @@
         <!--Header and hero text-->
         <div class="top-website">
             <div class="header">
-                <li class="logo"><img src="images/logo.png"></li>
+                <li id="top" class="logo"><img src="images/logo.png"></li>
                 <ul>
-                    <li class="link">Home</li>
+                    <a href="homepage.php"><li class="link">Home</li></a>
                     <a href="profilepage.php"><li class="link">Profile</li></a>
-                    <li class="link">About</li>
                 </ul>
             </div>
 
@@ -84,8 +83,8 @@
 
         <!--quote panel-->
         <div class="quote">
-            <p class="quote-text"><em>This is an inspiring quote, or a testimonial from a customer. Maybe it's just filling up space, or maybe people will actually read it. Who knows? All I know is that it looks nice.</em></p>
-            <p class="quote-author"><strong>-Thor, God of Thunder</strong></p>
+            <p class="quote-text"><em>Business cards are the digital equivalent of a handshake.</em></p>
+            <p class="quote-author"><strong>- Kevin O'Leary</strong></p>
         </div>
 
 
@@ -94,10 +93,10 @@
             <div class="action-container">
                 <div class="action-left">
                     <p class="action-text">Call to action! It's time!</p>
-                    <p class="secondary-text">Sign up for our product by clicking that button right over there!</p>
+                    <p class="secondary-text">Create Your Business Card Now!</p>
                 </div>
                 <div class="action-right">
-                    <button class="action-button">Sign Up</button>
+                    <a href="#top"><button class="action-button">Start Now</button></a>
                 </div>
             </div>
         </div>
