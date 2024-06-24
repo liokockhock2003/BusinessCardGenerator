@@ -5,8 +5,22 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     $position = $_POST["position"];
     $email = $_POST["email"];
     $address = $_POST["address"];
+    $template_id = $_POST["template_id"];
+    
     $imgData = $_FILES['image']['name'];
-    $imgData = "image/".$imgData;
+    $tempFilePath = $_FILES['image']['tmp_name'];
+    $imgData = "../image/".$imgData;
+    
+    if (move_uploaded_file($tempFilePath, $imgData)) {
+            echo "File is valid and was successfully uploaded.\n";
+            echo "Stored in: " . $imgData;
+
+            // Optionally, you can store the file path in a database
+            // $url = 'http://' . $_SERVER['HTTP_HOST'] . '/' . $uploadFilePath;
+            // Store $url in the database
+        } else {
+            echo "File upload failed.";
+        }
 
     try {
         require_once 'dbh.inc.php';
@@ -17,7 +31,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         //errop handlers
         $errors = [];
 
-        if(is_info_empty($name, $position, $email, $address, $imgData, $imgData)){
+        if(is_info_empty($name, $position, $email, $address, $template_id, $imgData, $imgData)){
             $errors["empty_input"] = "Fill in all the fields!";
         } 
         if(is_email_invalid($email)){
@@ -32,7 +46,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
         }
 
-        create_card($pdo, $name, $position, $email, $address, $imgData);
+        create_card($pdo, $name, $position, $email, $address, $template_id, $imgData);
         header("Location: ../homepage.php");
 
         $pdo=null;

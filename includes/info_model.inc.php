@@ -2,12 +2,13 @@
 
 declare(strict_types=1);
 
-function set_card(object $pdo, string $name, string $position, string $email, string $address, $imgData){
-    $query = "INSERT INTO businesscard (id, name, position, email, address, image) VALUES (:id, :name, :position, :email, :address, :imgData);";
+function set_card(object $pdo, string $name, string $position, string $email, string $address, string $template_id, $imgData){
+    $query = "INSERT INTO businesscard (id, template_id, name, position, email, address, image) VALUES (:id, :template_id, :name, :position, :email, :address, :imgData);";
     $stmt = $pdo->prepare($query);
 
     $id = $_SESSION["user_id"];
     $stmt->bindParam(":id", $id);
+    $stmt->bindParam(":template_id", $template_id);
     $stmt->bindParam(":name", $name);
     $stmt->bindParam(":position", $position);
     $stmt->bindParam(":email", $email);

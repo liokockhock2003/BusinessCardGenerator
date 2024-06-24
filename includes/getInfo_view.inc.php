@@ -43,8 +43,8 @@ function displayAddress(){
 }
 
 function displayImage(){
-    if (isset($_SESSION['cardDetails_5'])) {
-        $image = $_SESSION['cardDetails_5']["image"];
+    if (isset($_SESSION['cardDetails_7'])) {
+        $image = $_SESSION['cardDetails_7']["image"];
 
         echo "<img src='$image' >";
 
