@@ -8,6 +8,21 @@ function getCardDetails(object $pdo){
     $stmt = $pdo->prepare($query);
     $stmt->bindParam(":id", $id);
     $stmt->execute();
+    $cards = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+    //retrieve the number of records from SELECT statement
+    $_SESSION['card_count'] = count($cards);
 
-    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $cards;
+}
+
+function getCardCount(object $pdo){
+    $id = $_SESSION["user_id"];
+    $query = "SELECT COUNT(*) FROM businesscard WHERE id = :id";
+    $stmt = $pdo->prepare($query);
+    $stmt->bindParam(":id", $id);
+    $stmt->execute();
+    $rowCount = $stmt->fetchColumn();
+
+    return $rowCount;
 }
