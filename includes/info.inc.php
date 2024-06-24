@@ -9,7 +9,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
     
     $imgData = $_FILES['image']['name'];
     $tempFilePath = $_FILES['image']['tmp_name'];
-    $imgData = "../image/".$imgData;
+    $imgData = "image/".$imgData;
     
     if (move_uploaded_file($tempFilePath, $imgData)) {
             echo "File is valid and was successfully uploaded.\n";
