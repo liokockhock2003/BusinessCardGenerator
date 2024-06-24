@@ -50,3 +50,95 @@
     color: #1F2937;
     width: 100%;
 }
+
+/* Overlay Upate Form */
+
+.update-overlay{
+    justify-content: center;
+    justify-items: center;
+    height: 100%;
+    width: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.warp{
+    max-width: 350px;
+    margin: auto;
+    margin-top: 300px;
+    padding: 30px;
+    background-color: white;
+    justify-content: center;
+    justify-items: center;
+    border-radius: 10px;
+}
+
+.warp h1{
+    color: #1F2937;
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: 1000;
+}
+
+.warp p{
+    color: #1F2937;
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.form-control{
+    margin-bottom: 12px;
+    border-radius: 5px;
+    font-size: 15px;
+    height: 30px;
+    width: 300px;
+    border: 0.5px solid #1f293740;
+}
+
+.btn-primary{
+    background-color:#3882F6;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: 0px;
+    transition: 0.15s;
+}
+
+.btn-primary:hover{
+    background-color: #255ab0 ;
+    cursor: pointer;
+}
+
+.btn-cancel{
+    background-color:white;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: 0px;
+    transition: 0.15s;
+}
+
+.btn-cancel:hover{
+    background-color: #255ab0 ;
+    cursor: pointer;
+}
+
+label[for="upload"]{
+    color: #3882F6;
+    font-size: 15px;
+    transition: 0.15s;
+    
+}
+
+label[for="upload"]:hover{
+    color: #255ab0;
+    cursor: pointer;
+}
