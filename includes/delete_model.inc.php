@@ -2,9 +2,10 @@
 
 declare(strict_types=1);
 
-function deleteCard(object $pdo, string $card_id){
-    $query = "DELETE FROM businesscard WHERE card_id = :card_id;";
+function deleteCard(object $pdo, string $template_id, string $user_id){
+    $query = "DELETE FROM businesscard WHERE template_id = :template_id AND id = :user_id;";
     $stmt = $pdo->prepare($query);
-    $stmt->bindParam(":card_id", $card_id);
+    $stmt->bindParam(":template_id", $template_id);
+    $stmt->bindParam(":user_id", $user_id);
     $stmt->execute();
 }

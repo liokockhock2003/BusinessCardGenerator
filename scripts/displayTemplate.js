@@ -1,6 +1,7 @@
 // scripts.js
 // this script will display a php file in another php file
 import {setCookie} from './cookies.js';
+import { deleteCardData } from './deleteCardData.js';
 import {cancelUpdateCardDetails, updateCardDetails} from './updateCardData.js';
 import { viewCardPage } from './viewCard.js';
 
@@ -46,6 +47,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
         deleteButton.className = 'delete-button';
         deleteButton.innerHTML = 'Delete';
+        deleteButton.id = key
+        deleteButton.addEventListener('click', function() {
+            deleteCardData(this.id);
+            location.replace('profilepage.php');
+        });
+
         
         iframe.src = file;
         iframe.className = 'cardIframe';
