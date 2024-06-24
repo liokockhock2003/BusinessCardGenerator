@@ -68,6 +68,29 @@
             </div>
         </div>
 
+        <!-- Overlay Upate Form -->
+        <div id="update-overlay" class="update-overlay">
+            <h1>Business Cards</h1>
+            <p>Update new information about your card!</p>
+            <form action="includes/info.inc.php" method="post" class="formsize" id="signupForm" enctype="multipart/form-data">
+                <input type="text" name="name" id="name" class="form-control" placeholder="Your Name"> <br>
+                <input type="text" name="position" id="position" class="form-control" placeholder="Your Position"> <br>
+                <input type="text" name="email" id="email" class="form-control" placeholder="Your Email"> <br>
+                <input type="text" name="address" id="address" class="form-control" placeholder="Your Address"> <br>
+                <input type="file" name="image" id="upload" class="form-control-file"  aria-describedby="fileHelp">
+                <label for="upload"> <i class="fa fa-cloud-upload"></i></i>Upload Picture</label><br><br>
+
+                <div class="select-container">
+                    <div class = "icon-container">
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                </div>
+            <br>
+                        
+            <input type="submit" name="submit" value="Update Now" class="btn btn-primary"> <br><br>
+            </form>
+        </div>
+
         <!--footer-->
         <div class="footer">
             <p class="footer-text">Copyright © </p>
