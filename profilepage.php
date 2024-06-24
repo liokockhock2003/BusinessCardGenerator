@@ -78,7 +78,6 @@
                 <form action="includes/edit.inc.php" method="post" class="formsize" id="signupForm" enctype="multipart/form-data">
 
                     <input type="text" name="card_id" id="card_id" class="form-control" value="1"> <br>
-                    
                     <input type="text" name="name" id="name" class="form-control" placeholder="Your Name"> <br>
                     <input type="text" name="position" id="position" class="form-control" placeholder="Your Position"> <br>
                     <input type="text" name="email" id="email" class="form-control" placeholder="Your Email"> <br>

@@ -1,6 +1,7 @@
 // scripts.js
 // this script will display a php file in another php file
-import {getCookie, setCookie} from './cookies.js';
+import {setCookie} from './cookies.js';
+import {cancelUpdateCardDetails, updateCardDetails} from './updateCardData.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     // Array of HTML file URLs to embed
@@ -11,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
         // Add more URLs if needed
     ];
 
-    function displayCardInHTML(file) {
+    function displayCardInHTML(file, key) {
         var parentRef = document.getElementById('grid-container');
         var divRef = document.createElement('div');
         var iframe = document.createElement('iframe');
@@ -32,6 +33,10 @@ document.addEventListener("DOMContentLoaded", function() {
         viewButton.innerHTML = 'View';
         updateButton.className = 'update-button';
         updateButton.innerHTML = 'Update';
+        updateButton.id = key;
+        updateButton.addEventListener('click', function(){
+          updateCardDetails(this.id);
+        });
         deleteButton.className = 'delete-button';
         deleteButton.innerHTML = 'Delete';
         
@@ -62,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .then(data => {
           for(var key in data){
-            displayCardInHTML(htmlFiles[key - 1]);
+            displayCardInHTML(htmlFiles[key - 1], key);
             setCookie(data[key], key, 1);
           }
         })
@@ -71,5 +76,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
     // Call the function to embed the HTML files
+    document.getElementById('update-overlay').style.display = 'none';
     getCardCount();
 });

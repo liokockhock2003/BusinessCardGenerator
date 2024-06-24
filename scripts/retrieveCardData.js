@@ -4,7 +4,6 @@
 function determineTemplateID(){
     var path = window.location.pathname;
     var page = path.split("/").pop();
-    console.log( page );
 
     var htmlFiles = [
         'template1.php',
