@@ -20,7 +20,7 @@
                 <li class="logo"><img src="images/logo.png"></li>
                 <ul>
                     <li class="link">Home</li>
-                    <li class="link">More</li>
+                    <a href="profilepage.php"><li class="link">Profile</li></a>
                     <li class="link">About</li>
                 </ul>
             </div>
