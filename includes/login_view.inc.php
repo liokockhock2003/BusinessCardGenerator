@@ -19,3 +19,10 @@ function check_login_errors(){
         echo '<p class="form-success">Login Success!</p>';
     }   
 }
+
+function getUsername () {
+    if (isset($_SESSION["user_username"])) {
+        $username = $_SESSION["user_username"];
+        echo $username;
+    }
+}
