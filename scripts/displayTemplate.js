@@ -41,11 +41,11 @@ document.addEventListener("DOMContentLoaded", function() {
         divButton.appendChild(viewButton);
         divButton.appendChild(updateButton);
         divButton.appendChild(deleteButton);
-
+        
         divIframe.appendChild(iframe);
 
-        divRef.appendChild(divButton);
         divRef.appendChild(divIframe);
+        divRef.appendChild(divButton);
         parentRef.appendChild(divRef);
     }
 
