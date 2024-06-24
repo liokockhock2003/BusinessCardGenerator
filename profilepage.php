@@ -96,7 +96,7 @@
             <p class="footer-text">Copyright © </p>
         </div>
 
-        <script src="scripts/displayTemplate.js"></script>
+        <script type="module" src="scripts/displayTemplate.js"></script>
         
     </body>
 </html>
