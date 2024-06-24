@@ -4,8 +4,8 @@ declare(strict_types=1);
 require_once "config_session.inc.php";
 
 function displayName(){
-    if (isset($_SESSION['cardDetails_2'])) {
-        $name = $_SESSION['cardDetails_2']["name"];
+    if (isset($_SESSION['cardDetails_0'])) {
+        $name = $_SESSION['cardDetails_0']["name"];
         echo $name;
 
     } else {
@@ -14,8 +14,8 @@ function displayName(){
 }
 
 function displayEmail(){
-    if (isset($_SESSION['cardDetails_2'])) {
-        $email = $_SESSION['cardDetails_2']["email"];
+    if (isset($_SESSION['cardDetails_0'])) {
+        $email = $_SESSION['cardDetails_0']["email"];
         echo $email;
 
     } else {
@@ -24,8 +24,8 @@ function displayEmail(){
 }
 
 function displayPosition(){
-    if (isset($_SESSION['cardDetails_2'])) {
-        $position = $_SESSION['cardDetails_2']["position"];
+    if (isset($_SESSION['cardDetails_0'])) {
+        $position = $_SESSION['cardDetails_0']["position"];
         echo $position;
 
     } else {
@@ -34,8 +34,8 @@ function displayPosition(){
 }
 
 function displayAddress(){
-    if (isset($_SESSION['cardDetails_2'])) {
-        $address = $_SESSION['cardDetails_2']["address"];
+    if (isset($_SESSION['cardDetails_0'])) {
+        $address = $_SESSION['cardDetails_0']["address"];
         echo $address;
 
     } else {
@@ -44,8 +44,8 @@ function displayAddress(){
 }
 
 function displayImage(){
-    if (isset($_SESSION['cardDetails_7'])) {
-        $image = $_SESSION['cardDetails_7']["image"];
+    if (isset($_SESSION['cardDetails_3'])) {
+        $image = $_SESSION['cardDetails_3']["image"];
 
         echo "<img src='$image' >";
 

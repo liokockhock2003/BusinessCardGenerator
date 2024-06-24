@@ -25,13 +25,13 @@
                 <!-- Back Content -->
                 <div class="card__cta">
                     <h2>Contact</h2>
-                    <p>Name: </p>
-                    <p>Email: example@example.com</p>
-                    <p>Position: 123-456-7890</p>
-                    <p>Address: </p>
+                    <p>Name: <?php displayName() ?></p>
+                    <p>Email: <?php displayEmail() ?></p>
+                    <p>Position: <?php displayPosition() ?></p>
+                    <p>Address: <?php displayAddress() ?></p>
                 </div>
                 <div class="card__img">
-                    <img src="https://th.bing.com/th/id/OIP.VjlQHztonZHjR9tdbmGegwHaHa?rs=1&pid=ImgDetMain" alt="Your Picture">
+                    <?php displayImage() ?>
                 </div>
             </div>
         </div>
