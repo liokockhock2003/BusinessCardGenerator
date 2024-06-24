@@ -1,5 +1,6 @@
 <?php
     require_once "includes/config_session.inc.php";
+    require_once "includes/getInfo.inc.php";
     require_once "includes/info_view.inc.php";
 ?>
 
@@ -12,7 +13,6 @@
         <link rel="stylesheet" href="styles/styleHomepage.css">
         <link rel="stylesheet" href="styles/styleProfilepage.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script></script>
     </head>
     <body>
 
@@ -43,9 +43,9 @@
         <!--Information panels-->
         <div class="info-container">
             <h2>Your business card collections!</h2>
+            <p id="count"></p>
             <div class="grid-container" id="grid-container">
                 <!-- Dynamic content will be injected here -->
-                <div class = "card" id = "container"></div>
             </div>  
         </div>
 
@@ -73,8 +73,7 @@
             <p class="footer-text">Copyright © </p>
         </div>
 
-        <script src="scripts/script.js"></script>
         <script src="scripts/displayTemplate.js"></script>
-
+        
     </body>
 </html>
