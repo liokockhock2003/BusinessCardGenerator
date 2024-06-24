@@ -67,7 +67,7 @@
 .warp{
     max-width: 350px;
     margin: auto;
-    margin-top: 300px;
+    margin-top: auto;
     padding: 30px;
     background-color: white;
     justify-content: center;
