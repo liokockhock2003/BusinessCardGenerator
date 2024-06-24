@@ -13,12 +13,39 @@ document.addEventListener("DOMContentLoaded", function() {
         var parentRef = document.getElementById('grid-container');
         var divRef = document.createElement('div');
         var iframe = document.createElement('iframe');
+        var divButton = document.createElement('div');
+        var divIframe = document.createElement('div');
+        var viewButton = document.createElement('button');
+        var updateButton = document.createElement('button');
+        var deleteButton = document.createElement('button');
+
         divRef.className = 'card';
+
+        divButton.className = 'button';
+        divButton.style.flexGrow = 1;
+
+        divIframe.style.flexGrow = 6;
+
+        viewButton.className = 'view-button';
+        viewButton.innerHTML = 'View';
+        updateButton.className = 'update-button';
+        updateButton.innerHTML = 'Update';
+        deleteButton.className = 'delete-button';
+        deleteButton.innerHTML = 'Delete';
+
         iframe.src = file;
         iframe.className = 'cardIframe';
         iframe.frameBorder = 'no';
         iframe.scrolling = 'no';
-        divRef.appendChild(iframe);
+
+        divButton.appendChild(viewButton);
+        divButton.appendChild(updateButton);
+        divButton.appendChild(deleteButton);
+
+        divIframe.appendChild(iframe);
+
+        divRef.appendChild(divButton);
+        divRef.appendChild(divIframe);
         parentRef.appendChild(divRef);
     }
 
