@@ -116,7 +116,7 @@
 }
 
 .btn-cancel{
-    background-color:white;
+    background-color:#3882F6;
     color: white;
     font-size: 15px;
     font-weight: 500;
@@ -129,6 +129,12 @@
 .btn-cancel:hover{
     background-color: #255ab0 ;
     cursor: pointer;
+}
+
+.btn-div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
 }
 
 label[for="upload"]{

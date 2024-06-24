@@ -85,8 +85,14 @@
                     <input type="file" name="image" id="upload" class="form-control-file"  aria-describedby="fileHelp">
                     <label for="upload"> <i class="fa fa-cloud-upload"></i></i>Upload Picture</label><br><br>
 
-                    <input type="submit" name="cancel" value="Cancel" class="btn btn-cancel">
-                    <input type="submit" name="submit" value="Update Now" class="btn btn-primary"> <br><br>
+                    <div class="btn-div">
+                        <button id="cancelButton" name="cancel" class="btn btn-cancel">
+                            <a style="text-decoration: none; color: white;" href="profilepage.php">Cancel</a>
+                        </button>
+                        <button type="submit" name="submit" value="Update Now" class="btn btn-primary"> 
+                            Submit 
+                        </button>
+                    </div>
                 </form>
             </div>    
         </div>
