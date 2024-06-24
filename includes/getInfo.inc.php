@@ -5,13 +5,11 @@
 
         $cardDetails = getCardDetails($pdo); //in getinfo_model
         //2 dimensional
-        
         require_once 'config_session.inc.php'; //session
-
+        
         foreach ($cardDetails as $index => $card) {
             $_SESSION['cardDetails_' . $index] = $card;
         }
-
     } catch (PDOException $e) {
         die("Query failed: ". $e->getMessage());
     }
