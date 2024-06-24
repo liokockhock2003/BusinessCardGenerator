@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-function is_info_empty(string $name, string $position, string $email, string $address, string $template_id,$imgData){
-    if(empty($name) || empty($position) || empty($email) || empty($address) || empty($template_id) ||empty($imgData)){
+function is_info_empty(string $name, string $position, string $email, string $address, string $template_id, $imgData){
+    if(empty($name) || empty($position) || empty($email) || empty($address) || empty($template_id) || empty($imgData)){
         return true;
     } else {
         return false;
