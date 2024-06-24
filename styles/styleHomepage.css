@@ -327,16 +327,24 @@ label[for="upload"]:hover{
 
 /* Styling for the 2nd layer of the page */
 
+.info-container{
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
 .info-container h2 {
     text-align: center;
 }
 
-  .info-row {
+.info-row {
     display: flex;
     justify-content: space-evenly;
 
 }
 
+.info-panel img{
+    border-radius: 10px;
+}
 
 p.image {
     border: solid;
@@ -560,10 +568,11 @@ p.action-text {
     padding-bottom: 5%;
     padding-top: 5%;
     margin-top: 50%;
+    cursor: pointer;
 }
 
 .footer {
-    margin-top: 5%;
+    margin-top: 0%;
     text-align: center;
     padding-bottom: 1%;
     background-color: #1F2937;

@@ -68,14 +68,17 @@
             <h2>Choose Preferred Template</h2>
             <div class="info-row">
                 <div class="info-panel">
-                    <img class = "template" src="image/template3.png">
+                    <h2>Template 1<h2>
+                    <img class = "template" src="image/template1.png">
                 </div>
 
                 <div class="info-panel">
-                    <img  class = "template" src="image/template3.png">
+                    <h2>Template 2<h2>
+                    <img  class = "template" src="image/template2.png">
                 </div>
 
                 <div class="info-panel">
+                    <h2>Template 3<h2>
                     <img class = "template" src="image/template3.png">
                 </div>
             </div>    
@@ -96,14 +99,14 @@
                     <p class="secondary-text">Create Your Business Card Now!</p>
                 </div>
                 <div class="action-right">
-                    <a href="#top"><button class="action-button">Start Now</button></a>
+                    <button class="action-button">Sign Up</button>
                 </div>
             </div>
         </div>
 
         <!--footer-->
         <div class="footer">
-            <p class="footer-text">Copyright © </p>
+            <p class="footer-text">Copyright © Xerox</p>
         </div>
 
     </body>

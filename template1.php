@@ -32,19 +32,18 @@
                 <p id='name'><span class="space red">Name</span>
                 <span class="cyan">:</span> <span class="green"></span></p>
                 <span class="space red">email</span>
-                <span class="cyan">:</span> <span class="green"><?php displayEmail() ?></span>',
+                <span class="cyan">:</span> <span class="green" id="email"></span>',
                 <br/>
                 <span class="space red">position</span>
                 <span class="cyan">:</span>
-                <span class="green"><?php displayPosition() ?></span>,
+                <span class="green" id="position"></span>,
                 <br/>
-                <span class="space red">address</span><span class="cyan">:</span> <span class="green"><?php displayAddress() ?></span>
+                <span class="space red">address</span><span class="cyan">:</span> <span class="green" id="address"></span>
                 <br/> 
                 };
               </p>
             </div>
-            <div class="card__img">
-                <?php displayImage() ?>
+            <div class="card__img" id="image">
             </div>
           </div>
         </div>
