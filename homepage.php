@@ -99,7 +99,7 @@
                     <p class="secondary-text">Create Your Business Card Now!</p>
                 </div>
                 <div class="action-right">
-                    <button class="action-button">Sign Up</button>
+                    <a href="homepage.php"><button class="action-button">Start Now</button></a>
                 </div>
             </div>
         </div>
