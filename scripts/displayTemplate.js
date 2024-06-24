@@ -2,6 +2,7 @@
 // this script will display a php file in another php file
 import {setCookie} from './cookies.js';
 import {cancelUpdateCardDetails, updateCardDetails} from './updateCardData.js';
+import { viewCardPage } from './viewCard.js';
 
 document.addEventListener("DOMContentLoaded", function() {
     // Array of HTML file URLs to embed
@@ -31,12 +32,18 @@ document.addEventListener("DOMContentLoaded", function() {
         
         viewButton.className = 'view-button';
         viewButton.innerHTML = 'View';
+        viewButton.id = key;
+        viewButton.addEventListener('click', function(){
+          viewCardPage(this.id);
+        });
+
         updateButton.className = 'update-button';
         updateButton.innerHTML = 'Update';
         updateButton.id = key;
         updateButton.addEventListener('click', function(){
           updateCardDetails(this.id);
         });
+
         deleteButton.className = 'delete-button';
         deleteButton.innerHTML = 'Delete';
         
