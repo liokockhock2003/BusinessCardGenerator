@@ -99,14 +99,14 @@
                     <p class="secondary-text">Create Your Business Card Now!</p>
                 </div>
                 <div class="action-right">
-                    <a href="homepage.php"><button class="action-button">Start Now</button></a>
+                    <a href="#top"><button class="action-button">Start Now</button></a>
                 </div>
             </div>
         </div>
 
         <!--footer-->
         <div class="footer">
-            <p class="footer-text">Copyright © Xerox</p>
+            <p class="footer-text">Copyright © 2024 Xerox. All Rights Reserved</p>
         </div>
 
     </body>

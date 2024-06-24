@@ -98,7 +98,7 @@
 
         <!--footer-->
         <div class="footer">
-            <p class="footer-text">Copyright © </p>
+            <p class="footer-text">Copyright © 2024 Xerox. All Rights Reserved</p>
         </div>
 
         <script type="module" src="scripts/displayTemplate.js"></script>
