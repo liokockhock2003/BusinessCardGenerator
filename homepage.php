@@ -69,15 +69,15 @@
             <h2>Choose Preferred Template</h2>
             <div class="info-row">
                 <div class="info-panel">
-                    <img class = "template" src="image/3.png">
+                    <img class = "template" src="image/template3.png">
                 </div>
 
                 <div class="info-panel">
-                    <img  class = "template" src="image/3.png">
+                    <img  class = "template" src="image/template3.png">
                 </div>
 
                 <div class="info-panel">
-                    <img class = "template" src="image/3.png">
+                    <img class = "template" src="image/template3.png">
                 </div>
             </div>    
         </div>
