@@ -4,5 +4,5 @@ export function viewCardPage(id){
         'template2.php',
         'template3.php'
     ]
-    location.replace(htmlFiles[id - 1]);
+    window.open(htmlFiles[id - 1]);
 }
