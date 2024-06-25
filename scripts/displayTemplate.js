@@ -49,9 +49,13 @@ document.addEventListener("DOMContentLoaded", function() {
         deleteButton.innerHTML = 'Delete';
         deleteButton.id = key
         deleteButton.addEventListener('click', function() {
-            deleteCardData(this.id);
-            location.replace('profilepage.php');
-        });
+          if (confirm('Are you sure you want to delete the card data?')) {
+              deleteCardData(this.id);
+              location.replace('profilepage.php');
+          } else {
+              location.reload();
+          }
+      });
 
         
         iframe.src = file;
