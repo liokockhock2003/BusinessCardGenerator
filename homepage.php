@@ -21,6 +21,9 @@
                 <ul>
                     <a href="homepage.php"><li class="link">Home</li></a>
                     <a href="profilepage.php"><li class="link">Profile</li></a>
+                    <form action="includes/logout.inc.php">
+                        <button>log out</button>
+                    </form>
                 </ul>
             </div>
 

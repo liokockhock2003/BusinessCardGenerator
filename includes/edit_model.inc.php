@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 function getCardDetails(object $pdo, string $template_id){
     $id = $_SESSION["user_id"];
-    $query = "SELECT * FROM businesscard WHERE template_id = :template_id;";
+    $query = "SELECT * FROM businesscard WHERE template_id = :template_id AND id = :id;";
     $stmt = $pdo->prepare($query);
     $stmt->bindParam(":template_id", $template_id);
+    $stmt->bindParam(":id", $id);
     $stmt->execute();
     $card = $stmt->fetch(PDO::FETCH_ASSOC);
     
@@ -19,7 +20,6 @@ function getCardDetails(object $pdo, string $template_id){
 function updateCardDetails(object $pdo, string $card_id, string $name, string $position, string $email, string $address, string $template_id, $imgData){
     $query = "UPDATE businesscard
     SET 
-    card_id = :card_id,
     id = :id,
     template_id = :template_id,
     name = :name,
@@ -27,7 +27,7 @@ function updateCardDetails(object $pdo, string $card_id, string $name, string $p
     email = :email,
     address = :address,
     image = :imgData
-    WHERE template_id = :template_id;";
+    WHERE template_id = :template_id AND card_id = :card_id;";
 
     $stmt = $pdo->prepare($query);
 

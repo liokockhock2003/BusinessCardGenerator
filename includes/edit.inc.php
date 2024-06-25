@@ -12,7 +12,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         $dataCount = $_SESSION["card_count"];
 
         for($i=0; $i<$dataCount; $i++){
-            if($card["template_id"] == $template_id){
+            if($card["template_id"] == $template_id && $_SESSION["user_id"] == $card['id']){
                 
                 $card_id = $card['card_id'];
 
@@ -59,7 +59,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
             }
         }
         
-        updateCardDetails($pdo, $card_id, $name, $email, $position, $address, $template_id, $imgData);
+        updateCardDetails($pdo, $card_id, $name, $position, $email, $address, $template_id, $imgData);
         header("Location: ../profilepage.php?login=success");
 
         die();
