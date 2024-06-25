@@ -19,7 +19,7 @@
             <div class="card__side card__side--front">
                 <!-- Front Content -->
                 <div class="card__cont">
-                    <h2>Ahmad Saifudin</h2>
+                    <h2>THINK</h2>
                 </div>
             </div>
             <div class="card__side card__side--back">
